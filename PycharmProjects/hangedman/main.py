@@ -54,14 +54,14 @@ def play(word):
         print("\n")
     if guessed:
         print("Felicidades, has descubierto la palabra, ganaste!!!!")
-        winsound.PlaySound("Victoria.wav", winsound.SND_ASYNC)
+        winsound.PlaySound("Victoria.wav", winsound.SND_ALIAS)
     else:
         print("Lo siento, te quedaste sin intentos, la palabra era: " + word + ". A lo mejor a la siguiente!")
-        winsound.PlaySound("Fracaso.wav", winsound.SND_ASYNC)
+        winsound.PlaySound("Fracaso.wav", winsound.SND_ALIAS)
 
 
 def display_hangman(tries):
-    stages = [  # final state: head, torso, both arms, and both legs
+    stages = [  #Cabeza, cuerpo, un brazo y una pierna
                 """
                    --------
                    |      |
@@ -71,7 +71,7 @@ def display_hangman(tries):
                    |     / \\
                    -
                 """,
-                # head, torso, both arms, and one leg
+                # Cabeza, cuerpo, ambos brazos y una pierna
                 """
                    --------
                    |      |
@@ -81,7 +81,7 @@ def display_hangman(tries):
                    |     / 
                    -
                 """,
-                # head, torso, and both arms
+                # Cabeza, torso y ambos brazos
                 """
                    --------
                    |      |
@@ -91,7 +91,7 @@ def display_hangman(tries):
                    |      
                    -
                 """,
-                # head, torso, and one arm
+                # cabeza, torso y un brazo
                 """
                    --------
                    |      |
@@ -101,7 +101,7 @@ def display_hangman(tries):
                    |     
                    -
                 """,
-                # head and torso
+                # cabeza y torso
                 """
                    --------
                    |      |
@@ -111,7 +111,7 @@ def display_hangman(tries):
                    |     
                    -
                 """,
-                # head
+                # cabeza
                 """
                    --------
                    |      |
@@ -121,7 +121,7 @@ def display_hangman(tries):
                    |     
                    -
                 """,
-                # initial empty state
+                # no tiene el muñeco
                 """
                    --------
                    |      |
